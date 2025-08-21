@@ -20,7 +20,7 @@ function LoveForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/bond", { yourName, partnerName });
+      const res = await axios.post("https://bond-cuddly-backends.onrender.com/api/bond", { yourName, partnerName });
       setResult(res.data.percentage);
     } catch (err) {
       console.error(err);
