@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/romantic-bond-db", {
+    await mongoose.connect("mongodb+srv://eklavyamishra2001:t7s8VM64R8J6ujvV@cluster0.zapiptf.mongodb.net/cuddle", {
       useNewUrlParser: true,
       useUnifiedTopology: true
     });
