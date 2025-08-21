@@ -8,7 +8,11 @@ dotenv.config();
 const app = express();
 connectDB();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://bond-cuddly.onrender.com", // frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"], // allowed HTTP methods
+  credentials: true, // allow cookies if needed
+}));
 app.use(express.json());
 
 app.use("/api/bond", require("./routes/bondRoutes"));
